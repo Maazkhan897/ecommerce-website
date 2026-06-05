@@ -192,3 +192,6 @@ Password: admin123
 
 ---
 
+## 📄 License
+
+This project was developed for academic purposes as part of the Web Technologies course at COMSATS University Islamabad. Not licensed for commercial use.
