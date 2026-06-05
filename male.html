@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Fashion – Winter</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Winter</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="active">Shop <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="male.html">Shop For Male</a>
+          <a href="female.html">Shop For Female</a>
+          <a href="shoes.html">Shoes</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Pages <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="product.html">Product Details</a>
+          <a href="#">Login</a>
+          <a href="#">Shopping Cart</a>
+          <a href="#">Checkout</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Blog <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#">Latest News</a>
+          <a href="#">Fashion Tips</a>
+        </div>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="#" class="cart-icon">🛒<span class="badge">3</span></a>
+      <a href="#" class="search-icon">🔍</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<section class="shop-hero">
+  <p class="breadcrumb"><a href="index.html">Home</a> / Men's Fashion</p>
+  <h1>Men's Fashion</h1>
+  <p>Discover the latest styles in men's clothing and accessories</p>
+</section>
+
+<div class="shop-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#" class="active">All Men <span class="count">(24)</span></a></li>
+        <li><a href="#">Shirts <span class="count">(8)</span></a></li>
+        <li><a href="#">Jackets <span class="count">(5)</span></a></li>
+        <li><a href="#">Trousers <span class="count">(6)</span></a></li>
+        <li><a href="#">Suits <span class="count">(3)</span></a></li>
+        <li><a href="#">Accessories <span class="count">(2)</span></a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <h4>Price Range</h4>
+      <div class="price-range">
+        <input type="range" min="0" max="500" value="300">
+        <div class="price-range-vals"><span>$0</span><span>$300</span></div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <h4>Size</h4>
+      <ul>
+        <li><a href="#">XS</a></li>
+        <li><a href="#">S</a></li>
+        <li><a href="#">M</a></li>
+        <li><a href="#">L</a></li>
+        <li><a href="#">XL</a></li>
+        <li><a href="#">XXL</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <h4>Browse</h4>
+      <ul>
+        <li><a href="male.html" class="active">Men's Fashion</a></li>
+        <li><a href="female.html">Women's Fashion</a></li>
+        <li><a href="shoes.html">Shoes</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- PRODUCTS -->
+  <main>
+    <div class="shop-grid">
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="background:#FFFFFF;">
+          <img src="shirt2.png" alt="Shirt" style="width: 200px; height: 230px;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Shirts</p>
+          <h3>Plaid Flannel Shirt</h3>
+          <div class="rating">★★★★★</div>
+          <div class="product-footer">
+            <span class="price">$55</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="background:#FFFFFF;">
+          <img src="greyziphoodie.png" alt="Hoodie" style="width: 240px; height: 240px;"
+          style="background-color: white;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Jackets</p>
+          <h3>Grey Zip Hoodie</h3>
+          <div class="rating">★★★★☆</div>
+          <div class="product-footer">
+            <span class="price">$72</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="font-size:56px; background-color: white;">
+          <img src="blazer.png" alt="Blazer" style="width: 200px; height: 240px;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Suits</p>
+          <h3>Navy Blue Blazer</h3>
+          <div class="rating">★★★★★</div>
+          <div class="product-footer">
+            <span class="price">$189</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="font-size:56px; background-color: white;">
+          <img src="whitetee.png" alt="T-Shirt" style="width: 260px; height: 240px;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">T-Shirts</p>
+          <h3>Classic White Tee</h3>
+          <div class="rating">★★★☆☆</div>
+          <div class="product-footer">
+            <span class="price">$29</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="font-size:56px; background-color: white;">
+          <img src="chinos.png" alt="Chinos" style="width: 190px; height: 240px;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Trousers</p>
+          <h3>Slim Fit Chinos</h3>
+          <div class="rating">★★★★☆</div>
+          <div class="product-footer">
+            <span class="price">$69</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="shop-product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="font-size:56px; background-color: white;">
+          <img src="scarf.png" alt="Scarf" style="width: 180px; height: 240px;">
+        </div>
+        <div class="product-info">
+          <p class="product-cat">Accessories</p>
+          <h3>Wool Scarf</h3>
+          <div class="rating">★★★★★</div>
+          <div class="product-footer">
+            <span class="price">$35</span>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature"><div class="feature-icon">🚚</div><h4>Free Shipping</h4><p>On all orders above $50. Fast delivery to your doorstep.</p></div>
+  <div class="feature"><div class="feature-icon">💳</div><h4>Secure Payment</h4><p>100% secure payment with SSL encryption protection.</p></div>
+  <div class="feature"><div class="feature-icon">🔄</div><h4>Easy Returns</h4><p>30-day return policy for hassle-free shopping.</p></div>
+  <div class="feature"><div class="feature-icon">🕐</div><h4>24/7 Support</h4><p>Round the clock customer service whenever you need.</p></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Category</h4><ul><li><a href="male.html">Male</a></li><li><a href="female.html">Female</a></li><li><a href="shoes.html">Shoes</a></li><li><a href="#">Fashion</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">News</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Address</h4><p>200, Green Block, New York</p><p>+10 456 267 1678</p><p><a href="mailto:contact@winter.com" style="color:#1a6fe8;">Contact89@Winter.Com</a></p></div>
+    <div class="footer-col"><h4>Newsletter</h4><div class="newsletter"><input type="email" placeholder="Email Address"><button class="btn-primary">Subscribe</button></div><div class="social-icons"><a href="#" class="social">f</a><a href="#" class="social">t</a><a href="#" class="social">in</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Winter Fashion. All Rights Reserved.</p></div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

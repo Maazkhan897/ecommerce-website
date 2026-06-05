@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details – Winter</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Winter</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Shop <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="male.html">Shop For Male</a>
+          <a href="female.html">Shop For Female</a>
+          <a href="shoes.html">Shoes</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="active">Pages <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="product.html">Product Details</a>
+          <a href="#">Login</a>
+          <a href="#">Shopping Cart</a>
+          <a href="#">Checkout</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Blog <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#">Latest News</a>
+          <a href="#">Fashion Tips</a>
+        </div>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="#" class="cart-icon">🛒<span class="badge">3</span></a>
+      <a href="#" class="search-icon">🔍</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div style="background:#f9fafb; padding:12px 24px; border-bottom:1px solid #e5e7eb;">
+  <p style="max-width:1280px;margin:0 auto;font-size:0.85rem;color:#6b7280;">
+    <a href="index.html" style="color:#1a6fe8;">Home</a> /
+    <a href="female.html" style="color:#1a6fe8;">Women's Fashion</a> /
+    Faded SkyBlu Denim Jeans
+  </p>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<div class="product-detail">
+  <!-- Images -->
+  <div class="product-images">
+    <div class="main-image" id="main-img">👗</div>
+    <div class="thumbnails">
+      <div class="thumb active" onclick="selectThumb(this, '👗')">👗</div>
+      <div class="thumb" onclick="selectThumb(this, '👔')">👔</div>
+      <div class="thumb" onclick="selectThumb(this, '🧥')">🧥</div>
+      <div class="thumb" onclick="selectThumb(this, '👖')">👖</div>
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="product-detail-info">
+    <h1>Faded SkyBlu Denim Jeans</h1>
+    <div class="detail-price">$149.99</div>
+    <div class="rating" style="font-size:1.1rem;margin-bottom:16px;">★★★★★ <span style="color:#6b7280;font-size:0.85rem;">(3 Reviews)</span></div>
+    <div class="detail-meta">
+      <p>Category <span>: Household</span></p>
+      <p>Availability <span>: In Stock</span></p>
+    </div>
+    <p class="detail-desc">
+      Mill Oil is an innovative oil filled radiator with the most modern technology.
+      If you are looking for something that can make your interior look awesome,
+      and at the same time keep you warm during those cold winter months, this is the perfect choice for you.
+    </p>
+
+    <!-- Size -->
+    <div style="margin-bottom:20px;">
+      <p style="font-size:0.85rem;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;">Select Size</p>
+      <div style="display:flex;gap:8px;">
+        <button class="size-btn active-size" onclick="selectSize(this)">S</button>
+        <button class="size-btn" onclick="selectSize(this)">M</button>
+        <button class="size-btn" onclick="selectSize(this)">L</button>
+        <button class="size-btn" onclick="selectSize(this)">XL</button>
+      </div>
+    </div>
+
+    <div class="qty-selector">
+      <button class="qty-btn" onclick="changeQty(-1)">−</button>
+      <span class="qty-display" id="qty">1</span>
+      <button class="qty-btn" onclick="changeQty(1)">+</button>
+    </div>
+
+    <div class="detail-actions">
+      <button class="btn-add-cart" onclick="addToCart()">ADD TO CART</button>
+      <button class="btn-wishlist">♡</button>
+    </div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="product-tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn" onclick="showTab('desc', this)">Description</button>
+    <button class="tab-btn" onclick="showTab('spec', this)">Specification</button>
+    <button class="tab-btn" onclick="showTab('comments', this)">Comments</button>
+    <button class="tab-btn active" onclick="showTab('reviews', this)">Reviews</button>
+  </div>
+
+  <div class="tab-content" id="desc">
+    <p style="color:#555;line-height:1.8;max-width:700px;">This is a premium quality denim jean crafted for everyday wear. The faded sky blue finish gives it a casual yet stylish look perfect for any occasion. Made from 98% cotton and 2% elastane for comfort and durability.</p>
+  </div>
+
+  <div class="tab-content" id="spec">
+    <table style="border-collapse:collapse;width:100%;max-width:500px;">
+      <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:12px;font-weight:600;color:#333;">Material</td><td style="padding:12px;color:#555;">98% Cotton, 2% Elastane</td></tr>
+      <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:12px;font-weight:600;color:#333;">Fit</td><td style="padding:12px;color:#555;">Slim Fit</td></tr>
+      <tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:12px;font-weight:600;color:#333;">Wash</td><td style="padding:12px;color:#555;">Machine Washable</td></tr>
+      <tr><td style="padding:12px;font-weight:600;color:#333;">Origin</td><td style="padding:12px;color:#555;">Made in USA</td></tr>
+    </table>
+  </div>
+
+  <div class="tab-content" id="comments">
+    <p style="color:#555;">No comments yet. Be the first to comment on this product.</p>
+  </div>
+
+  <div class="tab-content active" id="reviews">
+    <div class="reviews-section">
+      <div class="overall-box">
+        <p style="font-size:0.8rem;color:#6b7280;margin-bottom:8px;">Overall</p>
+        <div class="overall-score">4.5</div>
+        <div style="color:#ffd700;font-size:1.1rem;margin:8px 0;">★★★★★</div>
+        <p style="font-size:0.8rem;color:#6b7280;">Based on 3 reviews</p>
+      </div>
+
+      <div class="star-breakdown">
+        <h4 style="margin-bottom:16px;font-size:0.95rem;">Based on 3 Reviews</h4>
+        <div class="star-row"><span>5 Star</span><span style="color:#ffd700;">★★★★★</span><div class="star-bar"><div class="star-fill" style="width:70%"></div></div><span>01</span></div>
+        <div class="star-row"><span>4 Star</span><span style="color:#ffd700;">★★★★☆</span><div class="star-bar"><div class="star-fill" style="width:30%"></div></div><span>01</span></div>
+        <div class="star-row"><span>3 Star</span><span style="color:#ffd700;">★★★☆☆</span><div class="star-bar"><div class="star-fill" style="width:0%"></div></div><span>00</span></div>
+        <div class="star-row"><span>2 Star</span><span style="color:#ffd700;">★★☆☆☆</span><div class="star-bar"><div class="star-fill" style="width:0%"></div></div><span>00</span></div>
+        <div class="star-row"><span>1 Star</span><span style="color:#ffd700;">★☆☆☆☆</span><div class="star-bar"><div class="star-fill" style="width:0%"></div></div><span>00</span></div>
+      </div>
+
+      <div class="add-review">
+        <h3>Add a Review</h3>
+        <p style="font-size:0.85rem;color:#6b7280;margin-bottom:16px;">Your Rating: <span style="color:#ffd700;">★★★★★</span> Outstanding</p>
+        <div class="review-form">
+          <input type="text" placeholder="Your Name">
+          <input type="email" placeholder="Your Email">
+          <textarea placeholder="Your review..."></textarea>
+          <button class="btn-primary" style="align-self:flex-start;">Submit Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Related Products -->
+<div style="max-width:1280px;margin:0 auto 80px;padding:0 24px;">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:32px;">Related Products</h2>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+    <div class="shop-product-card" onclick="location.href='product.html'">
+      <div class="product-img" style="height:180px;background:#dde8f5;">👗</div>
+      <div class="product-info"><p class="product-cat">Women</p><h3>Evening Dress</h3><div class="product-footer"><span class="price">$99</span><button class="add-btn">Add</button></div></div>
+    </div>
+    <div class="shop-product-card" onclick="location.href='product.html'">
+      <div class="product-img" style="height:180px;background:#f5dde8;">👚</div>
+      <div class="product-info"><p class="product-cat">Women</p><h3>Blouse Top</h3><div class="product-footer"><span class="price">$45</span><button class="add-btn">Add</button></div></div>
+    </div>
+    <div class="shop-product-card" onclick="location.href='product.html'">
+      <div class="product-img" style="height:180px;background:#ddf5e8;">🧥</div>
+      <div class="product-info"><p class="product-cat">Women</p><h3>Winter Coat</h3><div class="product-footer"><span class="price">$189</span><button class="add-btn">Add</button></div></div>
+    </div>
+    <div class="shop-product-card" onclick="location.href='product.html'">
+      <div class="product-img" style="height:180px;background:#f5edd8;">👜</div>
+      <div class="product-info"><p class="product-cat">Accessories</p><h3>Leather Bag</h3><div class="product-footer"><span class="price">$130</span><button class="add-btn">Add</button></div></div>
+    </div>
+  </div>
+</div>
+
+<section class="features">
+  <div class="feature"><div class="feature-icon">🚚</div><h4>Free Shipping</h4><p>On all orders above $50.</p></div>
+  <div class="feature"><div class="feature-icon">💳</div><h4>Secure Payment</h4><p>100% secure with SSL encryption.</p></div>
+  <div class="feature"><div class="feature-icon">🔄</div><h4>Easy Returns</h4><p>30-day return policy.</p></div>
+  <div class="feature"><div class="feature-icon">🕐</div><h4>24/7 Support</h4><p>Always here for you.</p></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Category</h4><ul><li><a href="male.html">Male</a></li><li><a href="female.html">Female</a></li><li><a href="shoes.html">Shoes</a></li><li><a href="#">Fashion</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">News</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Address</h4><p>200, Green Block, New York</p><p>+10 456 267 1678</p><p><a href="mailto:contact@winter.com" style="color:#1a6fe8;">Contact89@Winter.Com</a></p></div>
+    <div class="footer-col"><h4>Newsletter</h4><div class="newsletter"><input type="email" placeholder="Email Address"><button class="btn-primary">Subscribe</button></div><div class="social-icons"><a href="#" class="social">f</a><a href="#" class="social">t</a><a href="#" class="social">in</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Winter Fashion. All Rights Reserved.</p></div>
+</footer>
+
+<style>
+.size-btn {
+  width: 40px; height: 40px; border: 1px solid #e5e7eb;
+  background: #fff; cursor: pointer; border-radius: 4px;
+  font-size: 0.85rem; font-weight: 500; transition: all 0.2s;
+}
+.size-btn:hover { border-color: #1a6fe8; color: #1a6fe8; }
+.size-btn.active-size { background: #1a6fe8; border-color: #1a6fe8; color: #fff; }
+</style>
+
+<script src="main.js"></script>
+<script>
+function selectThumb(el, emoji) {
+  document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('main-img').textContent = emoji;
+}
+function selectSize(el) {
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active-size'));
+  el.classList.add('active-size');
+}
+// Init tab
+showTab('reviews', document.querySelector('.tab-btn.active'));
+</script>
+</body>
+</html>

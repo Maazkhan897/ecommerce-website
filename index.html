@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter Fashion</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Winter</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Shop <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="male.html">Shop For Male</a>
+          <a href="female.html">Shop For Female</a>
+          <a href="shoes.html">Shoes</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Pages <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="product.html">Product Details</a>
+          <a href="#">Login</a>
+          <a href="#">Shopping Cart</a>
+          <a href="#">Checkout</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#">Blog <span class="arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a href="#">Latest News</a>
+          <a href="#">Fashion Tips</a>
+        </div>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="#" class="cart-icon">🛒<span class="badge">3</span></a>
+      <a href="#" class="search-icon">🔍</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-sub">Winter Fashion</p>
+    <h1 class="hero-title">Fashion<br>Collection 2025</h1>
+    <a href="male.html" class="btn-primary">Shop Now</a>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-placeholder" style="padding-bottom: 250px;">
+      <img src="hero.png" alt="Hero Image" style="width: 100%; height: auto;">
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY SECTION -->
+<section class="categories">
+  <div class="cat-card">
+    <div class="cat-img cat-img-1">
+      <div class="cat-img">
+  <img src="feature_1.png" alt="">
+</div>
+    </div>
+    <div class="cat-label"><a href="male.html">Shop For Male</a></div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-img cat-img-2">
+        <img src="feature_2.png" alt="">
+
+    </div>
+    <div class="cat-label"><a href="female.html">Shop For Female</a></div>
+  </div>
+  <div class="cat-card">
+    <div class="cat-img cat-img-3">
+        <img src="feature_3.png" alt="">
+
+    </div>
+    <div class="cat-label"><a href="shoes.html">Shop For Shoes</a></div>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="new-arrivals">
+  <div class="section-header">
+    <h2>New Arrival</h2>
+    <div class="filter-tabs">
+      <button class="tab active" onclick="filterProducts('all', this)">All</button>
+      <button class="tab" onclick="filterProducts('men', this)">Men</button>
+      <button class="tab" onclick="filterProducts('women', this)">Women</button>
+      <button class="tab" onclick="filterProducts('shoes', this)">Shoes</button>
+    </div>
+  </div>
+  <div class="products-grid" id="products-grid">
+    <div class="product-card" data-cat="shoes">
+      <div class="product-img" style="background:#FFFFFf;display:flex;align-items:center;justify-content:center;font-size:60px;">
+        <img src="shoes.png" alt="Shoes"
+        style="width: 250px;">
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Shoes</span>
+        <h3>Fashloon Sneaker</h3>
+        <div class="product-footer">
+          <span class="price">$89</span>
+          <div class="product-actions">
+            <button class="icon-btn">♡</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="men">
+      <div class="product-img" style="background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:60px;">
+        <img src="shirt.png" alt="Shirt"
+        style="width: 200px;">
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Men</span>
+        <h3>Plaid Flannel Shirt</h3>
+        <div class="product-footer">
+          <span class="price">$55</span>
+          <div class="product-actions">
+            <button class="icon-btn">♡</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="men">
+      <div class="product-img" style="background:#ffffff;display:flex;align-items:center;justify-content:center;font-size:60px;">
+        <img src="hoodie.png" alt="Hoodie"
+        style="width: 200px;">
+      </div>
+      <div class="product-info">
+        <span class="product-cat">Men</span>
+        <h3>Grey Hoodie</h3>
+        <div class="product-footer">
+          <span class="price">$72</span>
+          <div class="product-actions">
+            <button class="icon-btn">♡</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature">
+    <div class="feature-icon">🚚</div>
+    <h4>Free Shipping</h4>
+    <p>On all orders above $50. Fast delivery to your doorstep.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">💳</div>
+    <h4>Secure Payment</h4>
+    <p>100% secure payment with SSL encryption protection.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🔄</div>
+    <h4>Easy Returns</h4>
+    <p>30-day return policy for hassle-free shopping experience.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">🕐</div>
+    <h4>24/7 Support</h4>
+    <p>Round the clock customer service whenever you need us.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Category</h4>
+      <ul>
+        <li><a href="male.html">Male</a></li>
+        <li><a href="female.html">Female</a></li>
+        <li><a href="shoes.html">Shoes</a></li>
+        <li><a href="#">Fashion</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Address</h4>
+      <p>200, Green Block, New York</p>
+      <p>+10 456 267 1678</p>
+      <p><a href="mailto:contact@winter.com" style="color:#1a6fe8;">Contact89@Winter.Com</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <div class="newsletter">
+        <input type="email" placeholder="Email Address">
+        <button class="btn-primary">Subscribe</button>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social">f</a>
+        <a href="#" class="social">t</a>
+        <a href="#" class="social">in</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Winter Fashion. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
